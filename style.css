@@ -137,6 +137,8 @@
 
 .mc-left {
     padding: 0px;
+    display: grid;
+    grid-template-rows: max-content 1fr;
 }
 
 .mc-right {
