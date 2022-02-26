@@ -127,18 +127,46 @@
 
 .main-content {
     background-color: var(--coolgray-color);
-
+    grid-row: 2;
+    grid-column: 2;
     display: grid;
+    /* grid-template-rows: 1fr 1fr; */
     grid-template-columns: 2fr 1fr;
-    /* grid-template-rows: 1fr 7fr; */
     padding: 21px;
 }
 
 .mc-left {
+    padding: 0px;
 }
 
 .mc-right {
+
     
+}
+
+.mc-right > :first-child,
+.trending-section {
+    padding-left: 36px;
+}
+
+.mc-right > .announcements-section > p {
+    font-weight: bold;
+    grid-row: 1;
+
+}
+
+.mc-left > .projects-title > p {
+    font-weight: bold;
+    grid-row: 1;
+}
+
+.titley {
+    font-weight: bold;
+    grid-row: 1;
+}
+
+.little-title {
+    font-weight: bold;
 }
 
 .projects {
@@ -146,18 +174,25 @@
     border-radius: 12px;
     /* border-top-left-radius: 12px; */
     background-color: white;
+    padding-bottom: 42px;
 }
 
-div.projects > p:first-child {
+.projects.title > p {
     font-weight: bold;
+
 }
 
 .project-divs {
+    grid-row: 2;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 21px;
     text-align: left;
+}
+
+.projects-title {
+    grid-row: 1;
 }
 
 .project-divs p {
@@ -168,7 +203,11 @@ div.projects > p:first-child {
 }
 
 .announcements-section {
-    padding: 25px;
+    padding: 0px 10px 25px 30px;
+}
+
+.announcements-section p {
+    font-size: 14px;
 }
 
 .announcements {
@@ -178,7 +217,28 @@ div.projects > p:first-child {
 
 .announcements > div {
     background-color: white;
-    padding: 0px 10px 10px 10px;
+    padding: 0px 10px 10px 30px;
+}
+
+.announcements > :first-child,
+.trending > :first-child {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.announcements > :last-child,
+.trending > :last-child {
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.trending {
+    /* background-color: white; */
+    display: grid;
+}
+
+.trending p {
+    font-size: 14px;
 }
 
 .trending > div {
@@ -188,4 +248,6 @@ div.projects > p:first-child {
 .separator {
     width: 70%;
     border-top: 2px solid var(--coolgray-color);
+    margin-top: -3px;
+    margin-bottom: -5px;
 }
