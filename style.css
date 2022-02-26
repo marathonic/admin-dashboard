@@ -1,5 +1,7 @@
 :root {
     --coolblue-color: #1479d8;
+    --coolgray-color: #d9eded;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -18,7 +20,8 @@
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 2fr 1fr;
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .first-row {
@@ -37,11 +40,11 @@
 }
 
 .search-bar {
-    width: 500px;
+    /* width: 500px; */
     height: 33px;
-    background-color: lightgray;
+    background-color: var(--coolgray-color);
     grid-row: 1;
-    grid-column: 2;
+    grid-column: 2 / 4;
 
     border-radius: 12px;
 }
@@ -115,7 +118,6 @@
 .sidebar p {
     color: white;
     font-size: 21px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #title-sidebar {
@@ -124,11 +126,11 @@
 }
 
 .main-content {
-    background-color: #d9eded;
+    background-color: var(--coolgray-color);
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: 1fr 7fr; */
     padding: 21px;
 }
 
@@ -139,16 +141,51 @@
     
 }
 
+.projects {
+    border-left: solid rgb(253, 207, 166) 10px;
+    border-radius: 12px;
+    /* border-top-left-radius: 12px; */
+    background-color: white;
+}
+
+div.projects > p:first-child {
+    font-weight: bold;
+}
+
 .project-divs {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
+    gap: 21px;
+    text-align: left;
 }
 
-.projects {
-    /* width: 200px;
-    height: 200px; */
+.project-divs p {
+    padding: 18px;
+    padding-top: 0px;
+    padding-right: 35px;
+    padding-bottom: 0px;
+}
+
+.announcements-section {
+    padding: 25px;
+}
+
+.announcements {
+    display: grid;
+    /* gap: 30px; */
+}
+
+.announcements > div {
     background-color: white;
+    padding: 0px 10px 10px 10px;
+}
+
+.trending > div {
+    background-color: white;
+}
+
+.separator {
+    width: 70%;
+    border-top: 2px solid var(--coolgray-color);
 }
