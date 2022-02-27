@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 :root {
     --coolblue-color: #1479d8;
     --coolgray-color: #d9eded;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -35,7 +37,7 @@
     grid-column: 1;
     display: grid;
     grid-template-columns: max-content minmax(200px, 1fr) 1fr;
-    border: blue dotted 2px;
+    /* border: blue dotted 2px; */
     align-items: center;
 }
 
@@ -57,8 +59,13 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    border: solid black 1px;
+    /* border: solid black 1px; */
 }
+
+.header img {
+    padding-right: 10px;
+}
+
 
 .second-row {
     grid-row: 2;
@@ -72,6 +79,10 @@
     display: grid;
     grid-template-columns: max-content minmax(200px, 1fr);
     align-items: center;
+}
+
+.b1 h4 {
+    margin-top: -14px;
 }
 
 .b2 {
@@ -92,6 +103,7 @@
     padding: 16px;
     width: 120px;
     height: 46px;
+    padding-top: 13px;
     border-radius: 25px;
     background-color: var(--coolblue-color);
     color: white;
@@ -237,14 +249,32 @@
 .trending {
     /* background-color: white; */
     display: grid;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-columns: 1fr 5fr;
+    background-color: white;
+    border-radius: 14px;
 }
 
 .trending p {
     font-size: 14px;
 }
 
-.trending > div {
-    background-color: white;
+.trending img {
+    justify-self: center;
+    align-self: center;
+    background-color: peachpuff;
+}
+
+.trending img:nth-child(1){
+    background-color: lightgreen;
+}
+
+.trending > img:nth-of-type(2){
+    background-color: skyblue;
+}
+
+.trending > img:nth-of-type(3) {
+    background-color: palevioletred;
 }
 
 .separator {
